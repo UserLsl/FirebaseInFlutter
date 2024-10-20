@@ -22,56 +22,56 @@ Este guia descreve os passos necessários para configurar um projeto Flutter int
   flutter pub add cloud_firestore
   flutter pub add firebase_core
 - Importe as dependências no main.dart:
-  ```sh
+  ```dart
   import 'package:cloud_firestore/cloud_firestore.dart';
   import 'package:firebase_core/firebase_core.dart';
 ### 5. Adicionar Nome/ID do package
 - Adicionar nome/ID do package caso não houver em android/app/src/main/AndroidManifest.xml
-  ```sh
+  ```dart
   <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.NOME_QUE_EU_QUISER">
 
-### 6. Verifica se o Node.js está instalado, senão instalar:
+### 6. Verificar Node.js
+- Verifica se o Node.js está instalado, senão instalar:
     ```bash
     node --version
-    ```
 
-### 7. Verifica se o npm está instalado, senão instalar:
+### 7. Verificar npm
+- Verifica se o npm está instalado, senão instalar:
     ```bash
     npm --version
-    ```
 
-### 8. Instala o CLI do Flutterfire:
+### 8. Instalar o CLI do Flutterfire
+- Comando para instalação:
     ```bash
     dart pub global activate flutterfire_cli
-    ```
 
-### 9. Instala o Firebase CLI:
+### 9. Instalar o Firebase CLI:
+- Comando para instalação:
     ```bash
     npm install -g firebase-tools
-    ```
 
-### 10. Verifica instalação do Firebase CLI, senão verificar PATH:
+### 10. Verifica instalação do Firebase CLI
+- Caso não encontrar verificar PATH
     ```bash
     firebase --version
-    ```
 
 ### 11. Fazer login na sua conta do Firebase:
-    ```bash
+  ```bash
     firebase login
-    ```
+  ```
 
 ### 12. Executa o comando na raiz do projeto para configurar o Firebase no projeto
-   (Observação: para mim, não funcionou no terminal do VSCode, somente no CMD):
-    ```bash
+  (Observação: para mim, não funcionou no terminal do VSCode, somente no CMD):
+   ```sh
     flutterfire configure
-    ```
+  ```
 
 ### 13. Após a configuração, será gerado um arquivo `firebase_options.dart` no mesmo diretório do `main.dart`.
 
 ### 14. Importar o `firebase_options.dart` no `main.dart`:
-    ```dart
-    import 'firebase_options.dart';
-    ```
+  ```dart
+  import 'firebase_options.dart';
+  ```
 
 > **⚠️ IMPORTANTE:**  
 > TALVEZ ESTEJA FALTANDO ALGO OU TENHA ALGO A MAIS QUE SEJA DESNECESSÁRIO.
